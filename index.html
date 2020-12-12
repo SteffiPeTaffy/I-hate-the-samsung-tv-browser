@@ -1,11 +1,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <form>
-  <p><input type="text" name="name" autofocus/></p>
-  <p><input type="submit" value="Go to" /></p>
+  <p><input type="text" name="url" autofocus/></p>
 </form>
 <script>
   $("form").submit(function(event) {
     event.preventDefault();
-    window.location.href = $("input[name=name]").val();
+    url = $("input[name=url]").val();
+    $("form")[0].reset();
+    window.open(url);
   });
 </script>
